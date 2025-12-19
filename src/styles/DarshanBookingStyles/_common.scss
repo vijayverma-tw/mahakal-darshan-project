@@ -1,0 +1,182 @@
+@import './variables';
+
+// Namespace all common styles within .darshan-booking
+.darshan-booking {
+  // Button Styles
+  .db-btn-primary {
+    background: linear-gradient(to right, $green-500, $green-600);
+    color: white;
+    font-weight: $font-bold;
+    padding: $spacing-4 $spacing-10;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-lg;
+    transform: scale(1);
+    transition: all $transition-normal ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-3;
+    font-size: 1.25rem;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(to right, $green-600, $green-700);
+      box-shadow: $shadow-2xl;
+      transform: scale(1.05);
+    }
+
+    &:active:not(:disabled) {
+      background: linear-gradient(to right, $green-700, $green-800);
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+  }
+
+  .db-btn-secondary {
+    background: linear-gradient(to right, $blue-500, $blue-600);
+    color: white;
+    font-weight: $font-bold;
+    padding: $spacing-4 $spacing-10;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-lg;
+    transform: scale(1);
+    transition: all $transition-normal ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-3;
+    font-size: 1.25rem;
+
+    &:hover:not(:disabled) {
+      background: linear-gradient(to right, $blue-600, $blue-700);
+      box-shadow: $shadow-2xl;
+      transform: scale(1.05);
+    }
+
+    &:active:not(:disabled) {
+      background: linear-gradient(to right, $blue-700, $blue-800);
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+  }
+
+  // Card Style
+  .db-card {
+    background: white;
+    border-radius: $radius-2xl;
+    box-shadow: $shadow-xl;
+    padding: $spacing-8;
+    transition: all $transition-normal ease-in-out;
+    border: 1px solid $orange-100;
+
+    &:hover {
+      box-shadow: $shadow-2xl;
+    }
+  }
+
+  // Input Field
+  .db-input-field {
+    width: 100%;
+    padding: $spacing-2 $spacing-3;
+    border: 2px solid $gray-300;
+    border-radius: $radius-lg;
+    background: white;
+    font-size: 0.875rem;
+    font-weight: $font-medium;
+    box-shadow: $shadow-sm;
+    transition: all $transition-normal ease-in-out;
+
+    &::placeholder {
+      color: $gray-400;
+    }
+
+    &:hover {
+      border-color: $saffron-400;
+    }
+
+    &:focus {
+      border-color: $saffron-600;
+      box-shadow: 0 0 0 2px rgba(253, 186, 116, 0.3), $shadow-md;
+      background: $orange-50;
+    }
+
+    &.error {
+      border-color: $red-600;
+      background: $red-50;
+      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+    }
+  }
+
+  textarea.db-input-field {
+    resize: none;
+  }
+
+  // Label Text
+  .db-label-text {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: 1.125rem;
+    font-weight: $font-extrabold;
+    color: $gray-800;
+    margin-bottom: $spacing-3;
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .required {
+      color: $red-600;
+      font-size: 1.5rem;
+    }
+
+    .optional {
+      color: $gray-500;
+      font-size: 0.75rem;
+      font-weight: $font-medium;
+      margin-left: $spacing-1;
+    }
+  }
+
+  // Error Text
+  .db-error-text {
+    color: $red-600;
+    font-size: 0.875rem;
+    margin-top: $spacing-2;
+    font-weight: $font-semibold;
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  // Form Group
+  .db-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Container
+  .db-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-10 $spacing-4;
+
+    .db-content-wrapper {
+      width: 100%;
+      max-width: 80rem;
+    }
+  }
+}
+

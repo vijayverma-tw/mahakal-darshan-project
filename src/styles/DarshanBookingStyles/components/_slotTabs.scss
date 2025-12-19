@@ -1,0 +1,169 @@
+@import '../variables';
+
+.darshan-booking .db-slot-tabs {
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    margin-bottom: $spacing-6;
+
+    .icon {
+      font-size: 2.25rem;
+    }
+
+    .title {
+      font-size: 1.875rem;
+      font-weight: $font-extrabold;
+      background: linear-gradient(to right, $saffron-700, $orange-600);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .description {
+    color: $gray-600;
+    margin-bottom: $spacing-6;
+    font-size: 1rem;
+  }
+
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-5;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .slot-button {
+    position: relative;
+    width: 100%;
+    padding: $spacing-5 $spacing-4;
+    border-radius: $radius-2xl;
+    font-weight: $font-bold;
+    font-size: 1rem;
+    transition: all $transition-normal ease-in-out;
+    transform: scale(1);
+
+    &:not(.selected) {
+      background: linear-gradient(to bottom right, white, $gray-50);
+      border: 3px solid $gray-300;
+      color: $gray-700;
+
+      &:hover {
+        border-color: $saffron-500;
+        box-shadow: $shadow-xl;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    &.selected {
+      background: linear-gradient(to bottom right, $saffron-600, $orange-600);
+      color: white;
+      box-shadow: $shadow-2xl;
+      transform: scale(1.05);
+      box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.3);
+    }
+
+    &.disabled {
+      background: $gray-100;
+      border: 3px solid $gray-200;
+      color: $gray-400;
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      &:hover {
+        border-color: $gray-200;
+        box-shadow: none;
+        transform: scale(1);
+      }
+    }
+
+    .button-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-2;
+
+      .slot-icon {
+        font-size: 2.5rem;
+      }
+
+      .slot-name {
+        font-size: 0.875rem;
+        text-align: center;
+
+        @media (min-width: 640px) {
+          font-size: 1rem;
+        }
+      }
+
+      .slot-availability {
+        font-size: 0.75rem;
+        font-weight: $font-semibold;
+        padding: $spacing-1 $spacing-2;
+        border-radius: $radius-full;
+        margin-top: $spacing-1;
+
+        &.high {
+          background: rgba($green-500, 0.15);
+          color: $green-700;
+        }
+
+        &.low {
+          background: rgba($orange-500, 0.15);
+          color: $orange-700;
+        }
+
+        &.none {
+          background: rgba($red-500, 0.15);
+          color: $red-700;
+        }
+      }
+    }
+
+    &.selected .slot-availability {
+      background: rgba(white, 0.2);
+      color: white;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: -0.5rem;
+      right: -0.5rem;
+      background: $green-500;
+      color: white;
+      border-radius: $radius-full;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: $shadow-lg;
+    }
+  }
+
+  .loading-content {
+    .spinner {
+      width: 2rem;
+      height: 2rem;
+      border: 3px solid $gray-200;
+      border-top-color: $saffron-600;
+      border-radius: $radius-full;
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-text {
+      color: $gray-600;
+      font-size: 1rem;
+    }
+  }
+}
+

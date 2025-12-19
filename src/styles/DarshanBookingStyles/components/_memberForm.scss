@@ -1,0 +1,261 @@
+@import '../variables';
+
+.darshan-booking .db-member-form {
+  background: linear-gradient(to bottom right, white, $purple-50);
+  border: 3px solid rgba(192, 132, 252, 0.2);
+  transition: all $transition-normal ease-in-out;
+
+  &:hover {
+    border-color: rgba(192, 132, 252, 0.4);
+  }
+
+  .form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-6;
+
+    .member-info {
+      display: flex;
+      align-items: center;
+      gap: $spacing-3;
+
+      .avatar {
+        width: 3rem;
+        height: 3rem;
+        border-radius: $radius-full;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: $shadow-lg;
+
+        &.primary {
+          background: linear-gradient(to bottom right, $saffron-500, $orange-600);
+          color: white;
+        }
+
+        &.additional {
+          background: linear-gradient(to bottom right, $purple-400, $pink-500);
+          color: white;
+        }
+      }
+
+      .member-title {
+        font-size: 1.5rem;
+        font-weight: $font-extrabold;
+        background: linear-gradient(to right, $purple-700, $pink-600);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .remove-btn {
+      background: linear-gradient(to right, #ef4444, #dc2626);
+      color: white;
+      padding: $spacing-2 $spacing-5;
+      border-radius: $radius-xl;
+      font-weight: $font-bold;
+      box-shadow: $shadow-lg;
+      transition: all $transition-normal ease-in-out;
+      transform: scale(1);
+
+      &:hover {
+        background: linear-gradient(to right, #dc2626, #b91c1c);
+        box-shadow: $shadow-xl;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  .fields-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-8;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .gender-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-5;
+
+    .gender-option {
+      cursor: pointer;
+      transition: all $transition-normal ease-in-out;
+      transform: scale(1);
+      border-radius: $radius-2xl;
+      padding: $spacing-6;
+
+      &:not(.selected) {
+        background: white;
+        border: 3px solid $gray-300;
+
+        &:hover {
+          background: linear-gradient(to bottom right, rgba(192, 132, 252, 0.05), rgba(236, 72, 153, 0.05));
+          border-color: rgba(192, 132, 252, 0.4);
+          box-shadow: $shadow-xl;
+          transform: scale(1.05);
+        }
+      }
+
+      &.selected {
+        background: linear-gradient(to bottom right, $purple-500, $pink-600);
+        box-shadow: $shadow-2xl;
+        transform: scale(1.05);
+        box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.3);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      .gender-input {
+        display: none;
+      }
+
+      .gender-content {
+        text-align: center;
+
+        .gender-icon {
+          font-size: 3rem;
+          display: block;
+          margin-bottom: $spacing-2;
+        }
+
+        .gender-label {
+          font-weight: $font-bold;
+          font-size: 1.25rem;
+          display: block;
+
+          &.selected-label {
+            color: white;
+          }
+
+          &.unselected-label {
+            color: $gray-800;
+          }
+        }
+      }
+    }
+  }
+
+  .aadhaar-counter {
+    margin-top: $spacing-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .counter-text {
+      font-size: 0.875rem;
+      color: $gray-600;
+      font-weight: $font-bold;
+    }
+
+    .complete-badge {
+      color: $green-600;
+      font-weight: $font-bold;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: $spacing-1;
+    }
+  }
+
+  // File Upload Styles
+  .file-upload-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+
+    .file-input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .file-upload-label {
+      flex: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      min-height: 3rem;
+      transition: all $transition-normal ease-in-out;
+
+      &:hover {
+        border-color: $purple-400;
+        background: linear-gradient(to bottom right, rgba(192, 132, 252, 0.05), rgba(236, 72, 153, 0.05));
+      }
+
+      .file-placeholder {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2;
+        color: $gray-500;
+
+        .upload-icon {
+          font-size: 1.25rem;
+        }
+      }
+
+      .file-selected {
+        display: flex;
+        align-items: center;
+        gap: $spacing-2;
+        color: $green-700;
+        font-weight: $font-semibold;
+
+        .file-icon {
+          font-size: 1.25rem;
+        }
+
+        .file-name {
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .file-remove-btn {
+      width: 2rem;
+      height: 2rem;
+      border-radius: $radius-full;
+      background: $red-500;
+      color: white;
+      font-size: 0.875rem;
+      font-weight: $font-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all $transition-normal ease-in-out;
+      flex-shrink: 0;
+
+      &:hover {
+        background: $red-600;
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,75 @@
+.templetime-banner {
+  background-image: url("../../../public/images/timing/timing-banner.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+.time-banner p {
+  background: linear-gradient(
+    90deg,
+    rgba(246, 211, 101, 0.3) 0%,
+    rgba(253, 160, 133, 0.3) 100%
+  );
+  border-radius: 100px;
+  padding: 8px 24px;
+  display: unset;
+  position: relative;
+}
+.time-banner .line-left {
+  display: inline-block;
+  height: 1px;
+  width: 452px;
+  background-image: url("../../../public/images/line.png");
+  background-size: contain;
+}
+.time-banner .line-right {
+  display: inline-block;
+  height: 1px;
+  width: 452px;
+  background-image: url("../../../public/images/line.png");
+  background-size: contain;
+}
+.time-banner h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.time-card {
+  background-color: #f6ead6;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.time-card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.time-img {
+  height: 177px;
+  overflow: hidden;
+  border-radius: 8px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.time-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.time-detail {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #898989;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0000001a;
+  }
+  span {
+    color: #ff8d28;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@font-face {
+    font-family: "samarkan";
+    src: url("../../public/font/samarkan/samarkan.TTF") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Averta";
+    src: url("../../public/font/averta/AvertaDemoPECuttedDemo-Regular.otf") format("opentype");
+    font-style: normal;
+    font-display: swap;
+}
+
+h1,
+h2 {
+    font-family: "Onest", sans-serif;
+}
+
+body {
+    font-family: "averta";
+}
+
+@font-face {
+    font-family: "georgia";
+    src: url("../../public/font/Georgia/georgia.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+
+.text-gradientcolor {
+    background: linear-gradient(103.09deg, #E66C13 1.38%, #E38D0D 42.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.outline-darshanbtn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-image-source: linear-gradient(103.09deg,
+            #E66C13 1.38%,
+            #E38D0D 42.01%);
+    border-image-slice: 1;
+    color: #FF6B6B;
+}
+
+.btn-bgcolor {
+    border: 1px solid transparent;
+    background: linear-gradient(101.29deg, #D26E30 1.22%, #EF5E04 65.24%);
+    border-radius: 8px;
+}
+
+.text-color {
+    background: linear-gradient(101.29deg, #D26E30 1.22%, #EF5E04 65.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

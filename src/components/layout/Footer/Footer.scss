@@ -1,0 +1,40 @@
+.footer-section {
+    padding: 24px 0px;
+
+    h4 {
+        background: linear-gradient(90.28deg, #FFC247 19.43%, #826220 88.58%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .footer-container {
+        border-radius: 16px;
+        background-color: #11111F;
+        .location-div {
+            background-color: #FFC247;
+            border-radius: 16px 16px 0px 0px;
+            padding: 19px 24px;
+
+        }
+        .left-side{
+            padding: 26px 30px;
+            p{
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: Onest;
+            }
+            .social-icons{
+                span{
+                    font-size: 14px;
+                    color: #ADAEB2;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,109 @@
+@import '../variables';
+
+.darshan-booking .db-booking-form {
+  .form-sections {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+  }
+
+  .member-item {
+    transition: all $transition-slow ease-in-out;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  .add-member-btn {
+    width: 100%;
+    padding: $spacing-5;
+    border: 4px dashed $saffron-500;
+    border-radius: $radius-2xl;
+    background: linear-gradient(to right, $orange-50, $yellow-100);
+    color: $saffron-700;
+    font-weight: $font-bold;
+    font-size: 1.25rem;
+    box-shadow: $shadow-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-3;
+    transition: all $transition-normal ease-in-out;
+    transform: scale(1);
+
+    .add-icon {
+      font-size: 1.875rem;
+    }
+
+    &:hover {
+      background: linear-gradient(to right, $orange-100, rgba(251, 191, 36, 0.3));
+      box-shadow: $shadow-xl;
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .max-members-info {
+    background: rgba(251, 191, 36, 0.1);
+    border: 3px solid $yellow-400;
+
+    .info-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-2;
+      color: rgba(120, 53, 15, 0.9);
+      font-weight: $font-bold;
+      text-align: center;
+
+      .info-icon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .action-buttons {
+    background: linear-gradient(to bottom right, $gray-50, $gray-100);
+    border: 3px solid $gray-300;
+
+    .buttons-grid {
+      display: flex;
+      justify-content: center;
+      gap: $spacing-6;
+
+      .db-btn-primary.full-width {
+        min-width: 250px;
+        max-width: 400px;
+      }
+    }
+
+    .info-banner {
+      margin-top: $spacing-6;
+      padding: $spacing-4;
+      background: linear-gradient(to right, $yellow-100, $orange-100);
+      border-radius: $radius-xl;
+      border: 2px solid $yellow-400;
+
+      .banner-text {
+        text-align: center;
+        color: $gray-800;
+        font-size: 1rem;
+        font-weight: $font-bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-2;
+
+        .banner-icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
