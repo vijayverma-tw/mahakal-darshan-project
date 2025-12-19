@@ -7,7 +7,7 @@ const Architect = () => {
                 {/* <div className="Arcitect-img">
                     <img src="images/about/architect-banner.svg" alt="" className="w-full" />
                 </div> */}
-                <div className="container">
+                {/* <div className="container">
                     <div className="row">
                         <div className="col-md-6">
                             <h1>Mahakaleshwar<br /> Temple</h1>
@@ -15,7 +15,7 @@ const Architect = () => {
 
                     </div>
 
-                </div>
+                </div> */}
             </section>
             {/*Shri Mahakaleshwar Jyotirlinga  */}
             <section className="architect-history">

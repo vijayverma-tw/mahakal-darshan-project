@@ -168,6 +168,12 @@
             font-size: 16px;
             line-height: 24px;
         }
+
+        button {
+            svg {
+                color: #EF5E04;
+            }
+        }
     }
 
     .about-cards {
@@ -200,6 +206,171 @@
 // 
 .temple-heritage {
     background-color: #F4F4F4;
+    padding-bottom: 70px;
+
+    .temple-card {
+        border-radius: 8px;
+        border: 1px solid #E6E6E6;
+
+        .image-wrapper {
+            position: relative;
+
+            img {
+                border-radius: 8px 8px 0px 0px;
+                width: 100%;
+            }
+
+            .tag {
+                border: 1px solid #fff;
+                background: #2B1212;
+                color: #fff;
+                border-radius: 100px;
+                font-size: 12px;
+                padding: 6px 10px;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+            }
+
+        }
+
+        .card-body {
+            padding: 0;
+
+            .card-title {
+                font-size: 18px;
+                font-family: Georgia;
+                margin-bottom: 12px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #00000099;
+            }
+
+            .card-footer {
+                border-color: #D9D9D9;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .location {
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    svg {
+                        font-size: 20px;
+                    }
+                }
+
+                button {
+                    text-decoration: none;
+                    font-size: 12px;
+
+                    svg {
+                        color: #EF5E04;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    li {
+        margin: 0px 10px;
+    }
+
+    /* Top-left slick dots */
+    .temple-slider {
+        position: relative;
+
+        .slick-dots {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            bottom: auto;
+            display: flex !important;
+            align-items: center;
+            gap: 8px;
+            width: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slick-dots li {
+            width: auto;
+            height: auto;
+            margin: 0;
+        }
+
+        /* Default dot */
+        .slick-dots li button {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+
+            &:before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background: #bdbdbd;
+                border-radius: 50%;
+                opacity: 1;
+                display: block;
+            }
+        }
+
+        /* Active dot → pill */
+        .slick-dots li.slick-active button:before {
+            width: 34px;
+            height: 10px;
+            background: #EF5E04;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .slider-header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 28px;
+    }
+
+    .slider-arrows {
+        display: flex;
+        gap: 8px;
+
+        button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            svg {
+                font-size: 16px;
+            }
+
+            &:hover {
+                background: #EF5E04;
+                border-color: #EF5E04;
+
+                svg {
+                    color: #fff;
+                }
+            }
+        }
+    }
 
 }
 
@@ -305,6 +476,7 @@
     }
 }
 
+//
 .center-attraction {
 
     /* Featured Card */

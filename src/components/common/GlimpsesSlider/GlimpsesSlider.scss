@@ -1,0 +1,80 @@
+.glimpses-section {
+    padding: 40px 0px 70px;
+}
+
+/* Header */
+.section-header {
+    margin-bottom: 2.5rem;
+
+    .badge {
+        display: inline-block;
+        background: #fdebd3;
+        color: #f97316;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        margin-top: 12px;
+        font-family: serif;
+        font-size: 32px;
+        color: #0b1444;
+    }
+}
+
+/* Slider */
+.glimpses-slider {
+
+    .slide-wrapper {
+        padding: 0 12px;
+        transition: all 0.4s ease;
+        opacity: 0.4;
+        transform: scale(0.85);
+
+        img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+
+    /* Active center slide */
+    .slick-center .slide-wrapper {
+        opacity: 1;
+        transform: scale(1);
+
+        img {
+            height: 260px;
+        }
+    }
+
+    /* Dots */
+    .slick-dots {
+        bottom: -35px;
+
+        li {
+            margin: 0;
+            width: 32px;
+        }
+
+        li button:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: #4F4F56;
+            border-radius: 50%;
+            opacity: 30%;
+        }
+
+        li.slick-active button:before {
+            width: 32px;
+            background: #4F4F56;
+            border-radius: 16px;
+            opacity: 1;
+        }
+    }
+}

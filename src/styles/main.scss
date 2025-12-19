@@ -17,7 +17,7 @@
 
 h1,
 h2 {
-    font-family: "Onest", sans-serif;
+font-family: "Onest", sans-serif;
 }
 
 body {
@@ -40,12 +40,14 @@ body {
 
 .outline-darshanbtn {
     background-color: transparent;
-    border: 1px solid transparent;
-    border-image-source: linear-gradient(103.09deg,
-            #E66C13 1.38%,
-            #E38D0D 42.01%);
-    border-image-slice: 1;
-    color: #FF6B6B;
+    // border: 1px solid transparent;
+    border: 1px solid #EF5E04;
+    // border-image-source: linear-gradient(103.09deg,
+    //         #E66C13 1.38%,
+    //         #E38D0D 42.01%);
+    // border-image-slice: 1;
+    // color: #FF6B6B;
+    border-radius: 4px;
 }
 
 .btn-bgcolor {

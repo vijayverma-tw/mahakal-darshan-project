@@ -2,8 +2,62 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./Home.scss";
 import { AiOutlineFire } from "react-icons/ai";
 import { FaArrowRight } from "react-icons/fa";
+import Slider from "react-slick";
+import { IoLocationOutline } from "react-icons/io5";
+import { AiOutlineExport } from "react-icons/ai";
+import { useRef } from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
+
+const temples = [
+  {
+    title: "Nagchandreshwar Temple",
+    tag: "Opens Once a Year",
+    image: "/images/home/nagchandreshwar.svg",
+    desc:
+      "A unique temple situated on the third floor of Mahakaleshwar, which opens only once a year on Nag Panchami, dedicated to Lord Shiva seated with Goddess...",
+    location: "Ujjain, MP",
+  },
+  {
+    title: "Kalabhairav Temple",
+    tag: "Unique Tradition",
+    image: "/images/home/Kalabhairav.svg",
+    desc:
+      "Dedicated to Kalbhairav, a fierce form of Lord Shiva. Known for its unique tradition where devotees offer liquor as prasad to the deity.",
+    location: "Ujjain, MP",
+  },
+  {
+    title: "Chintaman Ganesh",
+    tag: "Remover of Worries",
+    image: "/images/home/Ganesh.svg",
+    desc:
+      "The Chintaman Ganesh Temple in Ujjain is an ancient shrine where Lord Ganesha, worshipped as the remover of worries (Chintaman), blesses devotees with peace and...",
+    location: "Ujjain, MP",
+  },
+  {
+    title: "Kalabhairav Temple",
+    tag: "Unique Tradition",
+    image: "/images/home/Kalabhairav.svg",
+    desc:
+      "Dedicated to Kalbhairav, a fierce form of Lord Shiva. Known for its unique tradition where devotees offer liquor as prasad to the deity.",
+    location: "Ujjain, MP",
+  },
+];
 const Home = () => {
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 992, settings: { slidesToShow: 2 } },
+      { breakpoint: 576, settings: { slidesToShow: 1 } },
+    ],
+  };
+  const sliderRef = useRef(null);
   return (
     <>
       {/* banner */}
@@ -98,7 +152,8 @@ const Home = () => {
                 <p>
                   The temple complex includes several smaller shrines and is known for its grand celebrations during festivals such as Maha Shivaratri. The temple's architecture reflects ancient Indian styles, attracting millions of visitors annually.
                 </p>
-                <Button className="text-gradientcolor">Explore Temple History</Button>
+                <Button className="outline-darshanbtn text-color">Explore Temple History <AiOutlineExport className="" />
+                </Button>
               </div>
             </Col>
             <Col md={6}>
@@ -142,7 +197,7 @@ const Home = () => {
       </section>
 
       {/* Temple Heritage slider*/}
-      <section className="about-mahakaleshwar temple-heritage">
+      <section className="about-mahakaleshwar temple-heritage position-relative">
         <Container>
           <Row>
             <Col md={12}>
@@ -152,7 +207,46 @@ const Home = () => {
                 <p className="m-0">Discover the divine abodes surrounding Mahakaleshwar, each with unique<br /> spiritual significance.</p>
               </div>
             </Col>
-           
+            <Col md={12} className="position-relative">
+              <div className="slider-header">
+                <div className="slider-arrows">
+                  <button onClick={() => sliderRef.current.slickPrev()}>
+                    <MdOutlineKeyboardArrowLeft />
+                  </button>
+                  <button onClick={() => sliderRef.current.slickNext()}>
+                     <MdKeyboardArrowRight />
+                  </button>
+                </div>
+              </div>
+              <Slider ref={sliderRef} {...settings} className="temple-slider">
+                {temples.map((item, index) => (
+                  <div key={index} className="pe-2">
+                    <Card className="temple-card">
+                      <div className="image-wrapper">
+                        <img src={item.image} alt={item.title} />
+                        <span className="tag">{item.tag}</span>
+                      </div>
+
+                      <Card.Body>
+                        <div className="p-3">
+                          <Card.Title>{item.title}</Card.Title>
+                          <Card.Text>{item.desc}</Card.Text>
+                        </div>
+
+                        <div className="card-footer">
+                          <span className="location">
+                            <IoLocationOutline />
+                            {item.location}</span>
+                          <Button variant="link" className="learn-more p-0 text-color">
+                            Learn More<AiOutlineExport className="ms-2"/>
+                          </Button>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                ))}
+              </Slider>
+            </Col>
           </Row>
         </Container>
       </section>

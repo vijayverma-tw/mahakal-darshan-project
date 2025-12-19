@@ -10,6 +10,8 @@ import Trustees from "../pages/Trustees/Trustees";
 import Annakshetra from "../pages/Annakshetra/Annakshetra";
 import Contact from "../pages/Contact/Contact";
 import Pujari from "../pages/Pujari/Pujari";
+import MahakalLok from "../pages/MahakalLok/MahakalLok";
+import PujanAbhishek from "../pages/PujanAbhishek/PujanAbhishek";
 // import Contact from "../pages/Contact";
 // import NotFound from "../pages/NotFound";
 
@@ -21,11 +23,13 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/architect" element={<Architect />} />
         <Route path="/temple-timings" element={<TempleTimings />} />
+         <Route path="/mahakal-lok" element={<MahakalLok />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/trustees" element={<Trustees />} />
         <Route path="/annakshetra" element={<Annakshetra />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pujari" element={<Pujari />} />
+        <Route path="/pujan-abhishek" element={<PujanAbhishek />} />
 
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Route>

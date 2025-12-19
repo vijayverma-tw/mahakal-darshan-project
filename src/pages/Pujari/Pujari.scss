@@ -4,3 +4,86 @@
   background-size: cover;
   height: 60vh;
 }
+
+.pujari-purohit-wrapper {
+  padding: 50px 0px 0px;
+  background: #fff;
+}
+
+/* Common section */
+.member-section {
+  margin-bottom: 58px;
+
+  .section-title {
+    padding: 12px 0;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Onest';
+    text-align: center;
+  }
+}
+
+/* Pujari */
+.member-section.pujari {
+  .section-title {
+    background: #FFF8F0;
+    color: #000;
+    border-bottom: 1px solid #0000001A;
+  }
+}
+
+/* Purohit */
+.member-section.purohit {
+  padding-bottom: 42px;
+  .section-title {
+    background: #F0FDF4;
+    color: #000;
+    border-bottom: 1px solid #0000001A;
+  }
+}
+
+/* Card */
+.member-section {
+  .col-lg-4:nth-child(odd) {
+    .card-body {
+      background-color: #F4F4F4;
+      border-radius: 8px;
+    }
+  }
+
+  .col-lg-4:nth-child(even) {
+    .card-body {
+      background-color: #fff;
+      border-radius: 8px;
+    }
+  }
+}
+
+.member-card {
+  // border: 1px solid #E4E4E4;
+  // border-radius: 8px;
+  height: 100%;
+  transition: all 0.2s ease;
+
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(230, 108, 19, 0.1803921569);
+    transform: translateY(-2px);
+  }
+
+  h6 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: onest;
+    color: #11111F;
+  }
+
+  p {
+    font-size: 16px;
+    color: #11111F;
+    margin: 0;
+    font-family: onest;
+  }
+}
