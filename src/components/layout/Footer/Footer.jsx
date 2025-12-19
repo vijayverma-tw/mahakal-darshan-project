@@ -60,7 +60,7 @@ const Footer = () => {
                   <Col md={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
-                      <a>Contact Us</a>
+                      <a href='/contact'>Contact Us</a>
                     </div>
                   </Col>
                 </Row>
