@@ -25,7 +25,7 @@ const Footer = () => {
           <Row>
             <Col md={6}>
               <div className='left-content'>
-                <img src="images/logo-footer.svg" alt="" />
+                <img src="images/logo-footer.svg" alt="" className='footer-logo'/>
                 <p className='pt-3'>Mahakaleshwar Jyotirlinga is believed to free devotees from the fear of akaal mrityu. Lord Mahakal, the eternal protector, bestows blessings of longevity, strength, and liberation, ensuring peace and security in the devotee’s life.</p>
                 <div className='social-icons'>
                   <span>Connect with us</span>
@@ -48,13 +48,13 @@ const Footer = () => {
                   <Col md={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
-                      <a>Privacy Policy</a>
+                      <a href='/privacy-policy'>Privacy Policy</a>
                     </div>
                   </Col>
                   <Col md={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
-                      <a>Photo Gallery</a>
+                      <a href='/gallery'>Photo Gallery</a>
                     </div>
                   </Col>
                   <Col md={6}>

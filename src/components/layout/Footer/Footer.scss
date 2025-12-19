@@ -21,6 +21,7 @@
             justify-content: center;
             align-items: center;
             gap: 35px;
+
             li {
 
                 span {
@@ -30,8 +31,12 @@
                     display: flex;
                     align-items: center;
                     gap: 15px;
+
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
                 }
-               
+
             }
         }
     }
@@ -39,6 +44,12 @@
     .footer_bottom {
         padding: 30px 0px;
         background-color: #EF5E041A;
+
+        .footer-logo {
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
 
         .left-content {
             padding-right: 10%;
@@ -83,6 +94,11 @@
                 font-weight: 700;
                 color: #0B0B0B99;
                 margin: 0;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
 
             p {

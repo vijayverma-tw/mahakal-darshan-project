@@ -1,0 +1,124 @@
+.templehistory-banner {
+    background-image: url("../../../public/images/temple-histoy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+}
+
+/* TIMELINE */
+.timeline-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: #e6e6e6;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 120px;
+    display: flex;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+
+    .content-card {
+        margin-left: auto;
+    }
+}
+
+.timeline-item.left {
+    justify-content: flex-start;
+
+    .content-card {
+        margin-right: auto;
+    }
+}
+
+/* YEAR BADGE */
+.year-pill {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -28px;
+    background: linear-gradient(90deg, #E6E7EE 0%, #DBDDE6 1%, #FFFFFF 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 10px 40px 0px #00000026;
+    color: #0E1223;
+    font-weight: 800;
+    font-size: 14px;
+    font-family: 'Onest';
+    padding: 14px 22px;
+    border-radius: 100px;
+    z-index: 2;
+}
+
+/* CARD */
+.content-card {
+    width: 330px;
+
+    img {
+        // width: 100%;
+        width: 300px;
+        margin-bottom: 16px;
+    }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        font-family: onest;
+        color: #0E1223;
+
+    }
+
+    span {
+        background: #F6EAD6;
+        padding: 8px 16px;
+        border-radius: 100px;
+        color: #11111F;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Onest';
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #667085;
+        font-family: 'Onest';
+        margin: 16px 0px 0px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .timeline-wrapper::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        justify-content: flex-start !important;
+        padding-left: 40px;
+    }
+
+    .year-pill {
+        left: 20px;
+        transform: none;
+    }
+
+    .content-card {
+        width: 100%;
+    }
+}

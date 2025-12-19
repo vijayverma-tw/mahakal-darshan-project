@@ -1,59 +1,33 @@
 .mahakal-banner {
-   background-image: url("../../../public/images/mahakal-lok.png");
+  background-image: url("../../../public/images/mahakal-lok.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
 }
-.time-banner p {
-  background: linear-gradient(
-    90deg,
-    rgba(246, 211, 101, 0.3) 0%,
-    rgba(253, 160, 133, 0.3) 100%
-  );
-  border-radius: 100px;
-  padding: 8px 24px;
-  display: unset;
-  position: relative;
-}
-.time-banner .line-left {
-  display: inline-block;
-  height: 1px;
-  width: 452px;
-  background-image: url("../../../public/images/line.png");
-  background-size: contain;
-}
-.time-banner .line-right {
-  display: inline-block;
-  height: 1px;
-  width: 452px;
-  background-image: url("../../../public/images/line.png");
-  background-size: contain;
-}
-.time-banner h1 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #02033B;
-}
-.about-mahakalcard{
-    border:1px solid #0000001A;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 72px;
-    h5{
-        font-size: 20px;
-        color: #000000;
-        font-weight: 700;
-        font-family: Onest;
-    }
-    span{
-        font-size: 20px;
-        color: #000000;
-        font-weight: 400;
-        opacity: 40%;
-        font-family: Onest;
-    }
+
+
+.about-mahakalcard {
+  border: 1px solid #0000001A;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 72px;
+
+  h5 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+    font-family: Onest;
+  }
+
+  span {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    opacity: 40%;
+    font-family: Onest;
+  }
 }
 
-.Glimpses-div{
-  background-color:#F6EAD6;
+.Glimpses-div {
+  background-color: #F6EAD6;
 }

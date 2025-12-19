@@ -12,6 +12,12 @@ import Contact from "../pages/Contact/Contact";
 import Pujari from "../pages/Pujari/Pujari";
 import MahakalLok from "../pages/MahakalLok/MahakalLok";
 import PujanAbhishek from "../pages/PujanAbhishek/PujanAbhishek";
+import TemplePremises from "../pages/TemplePremises/TemplePremises";
+import Gallery from "../pages/Gallery/Gallery";
+import TempleHistory from "../pages/TempleHistory/TempleHistory";
+import UjjainHistory from "../pages/UjjainHistory/UjjainHistory";
+import ImportantDays from "../pages/ImportantDays/ImportantDays";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 // import Contact from "../pages/Contact";
 // import NotFound from "../pages/NotFound";
 
@@ -23,14 +29,20 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/architect" element={<Architect />} />
         <Route path="/temple-timings" element={<TempleTimings />} />
-         <Route path="/mahakal-lok" element={<MahakalLok />} />
+        <Route path="/mahakal-lok" element={<MahakalLok />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/trustees" element={<Trustees />} />
         <Route path="/annakshetra" element={<Annakshetra />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/pujari" element={<Pujari />} />
         <Route path="/pujan-abhishek" element={<PujanAbhishek />} />
-
+        <Route path="/temple-premises" element={<TemplePremises />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/temple-history" element={<TempleHistory />} />
+        <Route path="/ujjain-history" element={<UjjainHistory />} />
+        <Route path="/important-days" element={<ImportantDays />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Route>
 

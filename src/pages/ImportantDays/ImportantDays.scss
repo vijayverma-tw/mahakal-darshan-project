@@ -1,0 +1,78 @@
+.importantdays-banner {
+    background-image: url("../../../public/images/days.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+.important-table-wrapper {
+    background: #fff;
+    overflow: hidden;
+}
+
+.important-table {
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 0;
+    border-spacing: 0 8px;  
+    thead {
+        background: #ff8c24;
+        color: #fff;
+
+        th {
+            padding: 10px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 16px;
+            font-family: onest;
+
+            &:first-child {
+                width: 50px;
+                text-align: center;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background: #F6EAD6;
+
+            &:nth-child(even) {
+                background: #fde9d2;
+            }
+
+            td {
+                padding: 8px 10px;
+                border-bottom: 0;
+                font-size: 16px;
+                font-family: onest;
+                font-weight: 500;
+
+                &:first-child {
+                    text-align: center;
+                    font-weight: 600;
+
+                }
+            }
+        }
+    }
+}
+
+.important-note {
+    margin-top: 27px;
+    padding: 22px 80px;
+    background: #F0FDF4;
+    border: 1px solid #ABD9B9;
+    border-radius: 10px;
+    margin-bottom: 42px;
+
+    p {
+        margin: 0;
+        font-size: 18px;
+        color: #000000;
+        text-align: center;
+        font-family: onest;
+        background: transparent;
+        padding: 0;
+    }
+}

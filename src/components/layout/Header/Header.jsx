@@ -62,22 +62,34 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="#">
+                      <Link className="dropdown-item" to="/temple-premises">
                         Temples in Premises
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="#">
+                      <Link className="dropdown-item" to="/important-days">
                         Important Days
                       </Link>
                     </li>
                   </ul>
                 </li>
-
-                <li>
-                  <Link className="dropdown-item" to="#">
+                {/* History Submenu */}
+                <li className="dropdown-submenu">
+                  <Link className="dropdown-item dropdown-toggle" to="#">
                     History
                   </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/temple-history">
+                        Temple History
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="ujjain-history">
+                        Ujjain History
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/trustees">
