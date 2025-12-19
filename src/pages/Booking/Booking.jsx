@@ -1,4 +1,5 @@
 import "./Booking.scss";
+import SlotBooking from "./SlotBooking";
 
 const Booking = () => {
   return (
@@ -61,6 +62,8 @@ const Booking = () => {
             के भीतर भुगतान प्रक्रिया निश्चित रूप से पूर्ण कर लेवें।
           </p>
         </div>
+
+      <SlotBooking />
       </section>
     </>
   );

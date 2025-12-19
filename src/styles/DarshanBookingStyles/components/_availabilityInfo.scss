@@ -1,0 +1,182 @@
+@import '../variables';
+
+.darshan-booking .db-availability-info {
+  &.loading {
+    .loading-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-4;
+      padding: $spacing-4 0;
+
+      .spinner {
+        width: 3rem;
+        height: 3rem;
+        border: 4px solid $saffron-600;
+        border-top-color: transparent;
+        border-radius: $radius-full;
+        animation: spin 1s linear infinite;
+      }
+
+      .loading-text {
+        color: $gray-700;
+        font-size: 1.25rem;
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  &.available {
+    background: linear-gradient(to bottom right, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.2));
+    border: 4px solid rgba(16, 185, 129, 0.4);
+  }
+
+  &.unavailable {
+    background: linear-gradient(to bottom right, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.2));
+    border: 4px solid rgba(239, 68, 68, 0.4);
+  }
+
+  position: relative;
+  overflow: hidden;
+
+  .background-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+    font-size: 9rem;
+    line-height: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+
+    .info-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing-6;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+
+    .main-info {
+      flex: 1;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
+      .status-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-3;
+        margin-bottom: $spacing-3;
+
+        @media (min-width: 768px) {
+          justify-content: flex-start;
+        }
+
+        .status-icon {
+          font-size: 3rem;
+        }
+
+        .status-title {
+          font-size: 1.875rem;
+          font-weight: $font-extrabold;
+
+          &.available-text {
+            color: #047857;
+          }
+
+          &.unavailable-text {
+            color: #991b1b;
+          }
+        }
+      }
+
+      .seats-count {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: $spacing-3;
+
+        @media (min-width: 768px) {
+          justify-content: flex-start;
+        }
+
+        .count {
+          font-size: 4rem;
+          font-weight: $font-black;
+
+          &.available-count {
+            color: #047857;
+          }
+
+          &.unavailable-count {
+            color: #991b1b;
+          }
+        }
+
+        .label {
+          font-size: 1.5rem;
+          font-weight: $font-bold;
+          color: $gray-600;
+        }
+      }
+    }
+
+    .members-box {
+      text-align: center;
+      background: white;
+      border-radius: $radius-2xl;
+      padding: $spacing-6;
+      box-shadow: $shadow-lg;
+      border: 3px solid $saffron-300;
+
+      .box-label {
+        font-size: 0.875rem;
+        color: $gray-600;
+        font-weight: $font-semibold;
+      }
+
+      .members-count {
+        font-size: 3rem;
+        font-weight: $font-black;
+        color: $saffron-600;
+        margin: $spacing-2 0;
+      }
+
+      .members-label {
+        font-size: 1.125rem;
+        font-weight: $font-bold;
+        color: $gray-700;
+      }
+    }
+
+    .warning-box {
+      margin-top: $spacing-6;
+      padding: $spacing-4;
+      background: rgba(220, 38, 38, 0.2);
+      border-radius: $radius-xl;
+      border: 2px solid rgba(220, 38, 38, 0.4);
+
+      .warning-text {
+        color: #991b1b;
+        font-weight: $font-bold;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-2;
+      }
+    }
+  }
+}
+

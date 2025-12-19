@@ -1,0 +1,231 @@
+@import '../variables';
+
+.darshan-booking .db-date-selector {
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    margin-bottom: $spacing-3;
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: $font-bold;
+      background: linear-gradient(to right, $blue-600, $indigo-600);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .description {
+    color: $gray-600;
+    margin-bottom: $spacing-3;
+    font-size: 0.875rem;
+  }
+
+  .date-picker-wrapper {
+    position: relative;
+
+    .calendar-icon {
+      position: absolute;
+      right: $spacing-3;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 1.25rem;
+    }
+  }
+
+  .info-box {
+    margin-top: $spacing-3;
+    padding: $spacing-3;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
+    border-radius: $radius-lg;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+
+    .info-text {
+      font-size: 0.75rem;
+      color: $blue-800;
+      font-weight: $font-medium;
+      display: flex;
+      align-items: center;
+      gap: $spacing-1;
+    }
+  }
+}
+
+// React DatePicker Customization - scoped within darshan-booking
+.darshan-booking {
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker__input-container {
+    width: 100%;
+  }
+}
+
+// Global DatePicker Portal styles (rendered outside component tree)
+// These need to be scoped to only affect darshan-booking datepickers
+.darshan-booking-datepicker-popper {
+  z-index: 9999;
+}
+
+.darshan-booking .react-datepicker,
+.darshan-booking-datepicker-popper .react-datepicker {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  border: 2px solid #93c5fd;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+.darshan-booking .react-datepicker__header,
+.darshan-booking-datepicker-popper .react-datepicker__header {
+  background: linear-gradient(135deg, $blue-500 0%, $indigo-500 100%);
+  border-bottom: none;
+  border-radius: calc(#{$radius-lg} - 2px) calc(#{$radius-lg} - 2px) 0 0;
+  padding: $spacing-2 $spacing-2;
+}
+
+.darshan-booking .react-datepicker__current-month,
+.darshan-booking-datepicker-popper .react-datepicker__current-month {
+  color: white;
+  font-weight: $font-bold;
+  font-size: 0.9rem;
+  margin-bottom: $spacing-1;
+}
+
+.darshan-booking .react-datepicker__month-container,
+.darshan-booking-datepicker-popper .react-datepicker__month-container {
+  float: none;
+}
+
+.darshan-booking .react-datepicker__month,
+.darshan-booking-datepicker-popper .react-datepicker__month {
+  margin: $spacing-2;
+}
+
+.darshan-booking .react-datepicker__day-names,
+.darshan-booking-datepicker-popper .react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.darshan-booking .react-datepicker__day-name,
+.darshan-booking-datepicker-popper .react-datepicker__day-name {
+  color: white;
+  font-weight: $font-semibold;
+  font-size: 0.7rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.darshan-booking .react-datepicker__week,
+.darshan-booking-datepicker-popper .react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.darshan-booking .react-datepicker__day,
+.darshan-booking-datepicker-popper .react-datepicker__day {
+  font-weight: $font-medium;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1rem;
+  border-radius: $radius-md;
+  transition: all $transition-normal ease;
+  cursor: pointer;
+  line-height: 1.8rem;
+
+  &:hover:not(.react-datepicker__day--disabled) {
+    background: linear-gradient(135deg, $saffron-200 0%, $saffron-300 100%);
+    transform: scale(1.05);
+  }
+}
+
+.darshan-booking .react-datepicker__day--selected,
+.darshan-booking .react-datepicker__day--keyboard-selected,
+.darshan-booking-datepicker-popper .react-datepicker__day--selected,
+.darshan-booking-datepicker-popper .react-datepicker__day--keyboard-selected {
+  background: linear-gradient(135deg, $saffron-500 0%, $saffron-600 100%);
+  color: white;
+  font-weight: $font-bold;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(249, 115, 22, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, $saffron-500 0%, $saffron-600 100%);
+  }
+}
+
+.darshan-booking .react-datepicker__day--disabled,
+.darshan-booking-datepicker-popper .react-datepicker__day--disabled {
+  color: $gray-300;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.darshan-booking .react-datepicker__day--today,
+.darshan-booking-datepicker-popper .react-datepicker__day--today {
+  font-weight: $font-bold;
+  color: $saffron-500;
+  border: 1px solid $saffron-500;
+}
+
+.darshan-booking .react-datepicker__navigation,
+.darshan-booking-datepicker-popper .react-datepicker__navigation {
+  top: $spacing-2;
+  width: 24px;
+  height: 24px;
+}
+
+.darshan-booking .react-datepicker__navigation-icon::before,
+.darshan-booking-datepicker-popper .react-datepicker__navigation-icon::before {
+  border-color: white;
+  border-width: 2px 2px 0 0;
+  width: 6px;
+  height: 6px;
+}
+
+// Popper arrow styling
+.darshan-booking .react-datepicker__triangle,
+.darshan-booking-datepicker-popper .react-datepicker__triangle {
+  display: none;
+}
+
+// Additional calendar body styles
+.darshan-booking .react-datepicker__month-container,
+.darshan-booking-datepicker-popper .react-datepicker__month-container {
+  background-color: white;
+}
+
+.darshan-booking .react-datepicker__day--outside-month,
+.darshan-booking-datepicker-popper .react-datepicker__day--outside-month {
+  color: $gray-300;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.darshan-booking .react-datepicker__day--weekend,
+.darshan-booking-datepicker-popper .react-datepicker__day--weekend {
+  color: inherit;
+}
+
