@@ -2,7 +2,8 @@
   background-image: url("../../../public/images/trustees/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  // height: 60vh;
+  aspect-ratio: 16 / 5;
 }
 .trustees-card {
   background-color: #f6ead6;

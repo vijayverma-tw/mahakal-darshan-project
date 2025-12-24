@@ -2,7 +2,8 @@
   background-image: url("../../../public/images/pujari.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  // height: 60vh;
+  aspect-ratio: 16 / 5;
 }
 
 .pujari-purohit-wrapper {

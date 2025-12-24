@@ -2,9 +2,179 @@
     background-image: url("../../../public/images/ujjain-history.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    // height: 90vh;
+    aspect-ratio: 16 / 7;
 }
-h2{
-    font-size: 50px;
-    // padding: 20px;
+
+.top-heading {
+    .section-tag {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #FF8D28;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #101828;
+        margin-bottom: 12px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+        }
+    }
+
+    .title-line {
+        width: 96px;
+        height: 4px;
+        background: #FF8D28;
+        margin: 0 auto 63px;
+        border-radius: 3px;
+    }
+}
+
+.ujjain-historysection {
+    padding: 32px 0 80px;
+    font-family: onest;
+
+
+
+    .ujjain-history-content {
+
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #364153;
+            margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /* Ancient Names Card */
+    .ancient-names-card {
+        margin-top: 63px;
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid #FFEDD4;
+        box-shadow:
+            0px 8px 10px -6px #0000001A,
+            0px 20px 25px -5px #0000001A;
+
+
+        h6 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #101828;
+        }
+
+        .names-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 11px;
+            max-width: 766px;
+            margin: 0 auto;
+
+            span {
+                padding: 8px 16px;
+                font-size: 14px;
+                color: #9F2D00;
+                background: #FFF7ED;
+                border: 1px solid #FFD6A7;
+                border-radius: 33px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.temple-visit {
+    background-color: #F5F5F4;
+    padding: 80px 0px;
+    font-family: Onest;
+
+    .discover-text {
+        font-size: 16px;
+        color: #4A5565;
+    }
+
+    /* Temple Card */
+    .temple-card {
+        border: none;
+        height: 100%;
+        border-radius: 16px;
+        border: 1px solid #DBDBDB;
+        transition: transform 0.3s ease;
+        background: transparent;
+
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .img-wrap {
+            height: 177px;
+
+            img {
+                height: 100%;
+                border-radius: 8px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h5 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #000000;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            color: #898989;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #FFFFFF;
+            height: 88%;
+        }
+    }
+}
+
+// reach-section
+
+.reach-section {
+    padding: 80px 0px;
+
+    .reach-card {
+        background: #FFFBEB;
+        border-radius: 16px;
+        padding: 33px;
+        text-align: center;
+        border: 1px solid #F6EAD6;
+        height: 100%;
+
+        h6 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #101828;
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5565;
+            margin: 0;
+        }
+    }
 }

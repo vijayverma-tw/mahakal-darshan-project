@@ -1,6 +1,14 @@
 .navbar {
   background: linear-gradient(101.29deg, #d26e30 1.22%, #ef5e04 65.24%);
   height: 80px;
+
+  @media (max-width: 767px) {
+    position: sticky !important;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
   .active {
     color: #fff !important;
     font-size: 16px;
@@ -24,7 +32,7 @@
 }
 
 /* Open main dropdown on hover */
-.nav-item.dropdown:hover > .dropdown-menu {
+.nav-item.dropdown:hover>.dropdown-menu {
   display: block;
 }
 
@@ -33,7 +41,7 @@
   position: relative;
 }
 
-.dropdown-submenu > .dropdown-menu {
+.dropdown-submenu>.dropdown-menu {
   top: 0;
   left: 100%;
   margin-left: 0.1rem;
@@ -42,28 +50,33 @@
 }
 
 /* Show submenu on hover */
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover>.dropdown-menu {
   display: block;
 }
 
 /* Add right arrow for submenu items */
-.dropdown-submenu > a::after {
+.dropdown-submenu>a::after {
   content: "";
   float: right;
 }
 
 /* ---------------- MAIN DROPDOWN ---------------- */
 
-.nav-item.dropdown > .dropdown-menu {
+.nav-item.dropdown>.dropdown-menu {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.25s ease;
-  display: block; /* IMPORTANT for animation */
+  display: block;
+  /* IMPORTANT for animation */
   margin-top: 10px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
-.nav-item.dropdown:hover > .dropdown-menu {
+.nav-item.dropdown:hover>.dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -76,7 +89,7 @@
 }
 
 /* Submenu hidden state */
-.dropdown-submenu > .dropdown-menu {
+.dropdown-submenu>.dropdown-menu {
   top: 0;
   left: 100%;
   opacity: 0;
@@ -85,10 +98,14 @@
   transition: all 0.25s ease;
   display: block;
   margin-left: 0.2rem;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 /* Submenu visible */
-.dropdown-submenu:hover > .dropdown-menu {
+.dropdown-submenu:hover>.dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -97,7 +114,7 @@
 /* ---------------- ARROW ICON ---------------- */
 
 /* Arrow for submenu */
-.dropdown-submenu > .dropdown-toggle::after {
+.dropdown-submenu>.dropdown-toggle::after {
   content: "›";
   float: right;
   font-size: 20px;
@@ -140,6 +157,101 @@
   padding-left: 20px !important;
   color: #fff;
 }
-.navbar .dropdown:hover .dropdown-submenu > .dropdown-toggle::after{
+
+.navbar .dropdown:hover .dropdown-submenu>.dropdown-toggle::after {
   color: #fff;
+}
+
+// navbar mobile responsiv
+.navbar-toggler-icon:after,
+.navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all .3s linear;
+}
+
+.navbar-toggler-icon:after {
+  top: 8px;
+}
+
+.navbar-toggler::before,
+.navbar-toggler::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  top: 8px;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.navbar-toggler[aria-expanded="true"]::before,
+.navbar-toggler[aria-expanded="true"]::after {
+  display: block;
+}
+
+.navbar-toggler[aria-expanded="true"]::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    overflow: hidden;
+    top: 64px;
+    position: fixed;
+    height: calc(100vh - 30px) !important;
+    background: linear-gradient(101.29deg, #d26e30 1.22%, #ef5e04 65.24%);
+    left: -100vw !important;
+    transition: all .5s ease;
+    padding: 0;
+    margin: 0;
+    display: block !important;
+    visibility: hidden;
+    width: 90% !important;
+    z-index: 9;
+
+    .navbar-nav {
+      padding: 40px 20px 20px;
+    }
+  }
+
+  .navbar-collapse.show {
+    left: 0 !important;
+    transition: all .3s ease;
+    visibility: visible;
+  }
+
+  button.navbar-toggler {
+    background: 0 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler-icon {
+    border-bottom: 2px solid #fff;
+    background-image: none !important;
+    left: 0;
+    position: absolute !important;
+    transition: all .3s linear;
+    width: 24px !important;
+    height: 17px !important;
+  }
+
+
 }

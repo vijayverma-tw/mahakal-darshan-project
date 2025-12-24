@@ -5,9 +5,12 @@ import { FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineExport } from "react-icons/ai";
-import { useRef } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { AiOutlinePlus } from "react-icons/ai";
+
+import { useEffect, useRef } from "react";
+
 
 
 const temples = [
@@ -45,6 +48,14 @@ const temples = [
   },
 ];
 const Home = () => {
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 0);
+  }, []);
+
   const settings = {
     dots: true,
     arrows: true,
@@ -57,7 +68,7 @@ const Home = () => {
       { breakpoint: 576, settings: { slidesToShow: 1 } },
     ],
   };
-  const sliderRef = useRef(null);
+
   return (
     <>
       {/* banner */}
@@ -69,7 +80,7 @@ const Home = () => {
             </Col>
             <Col md={7}>
               <div className="Heading_div">
-                <div className="span-sacred mb-4">
+                <div className="span-sacred mb-4 mt-4 mt-lg-0 mt-md-0">
                   <span className="">
                     <AiOutlineFire />
                     One of the 12 Sacred Jyotirlingas</span>
@@ -86,7 +97,7 @@ const Home = () => {
                     <AiOutlineFire className="me-2" />
                     Book Bhasma Aarti
                   </Button>
-                  <Button className="ms-4 book-darshanbtn text-color outline-darshanbtn">
+                  <Button className="ms-lg-4 ms-md-4 ms-2 book-darshanbtn text-color outline-darshanbtn">
                     <img src="icons/Calendar.svg" alt="" className="me-2" />
                     Book Darshan Pass
                   </Button>
@@ -101,28 +112,28 @@ const Home = () => {
       {/* temple-stats */}
       <section className="temple-stats">
         <Container>
-          <Row className="text-center justify-content-center">
-            <Col md={2}>
+          <Row className="text-center justify-content-center g-3">
+            <Col xl={2} lg={3} md={3} sm={2} xs={6}>
               <div className="stat-item">
-                <h3 className="text-color">50,000+</h3>
+                <h3 className="text-color">50,000 <AiOutlinePlus /></h3>
                 <p className="m-0">Daily Visitors</p>
               </div>
             </Col>
-            <Col md={2}>
+            <Col xl={2} lg={3} md={3} sm={2} xs={6}>
               <div className="stat-item">
-                <h3 className="text-color">1000+</h3>
+                <h3 className="text-color">1000<AiOutlinePlus /></h3>
                 <p className="m-0">Years of History</p>
               </div>
             </Col>
-            <Col md={2}>
+            <Col xl={2} lg={3} md={3} sm={2} xs={6}>
               <div className="stat-item">
                 <h3 className="text-color">5</h3>
                 <p className="m-0">Daily Aartis</p>
               </div>
             </Col>
-            <Col md={2}>
+            <Col xl={2} lg={3} md={3} sm={2} xs={6}>
               <div className="stat-item">
-                <h3 className="text-color">12+</h3>
+                <h3 className="text-color">12<AiOutlinePlus /></h3>
                 <p className="m-0">Temples in Complex</p>
               </div>
             </Col>
@@ -141,7 +152,7 @@ const Home = () => {
                 <p className="m-0">One of the most sacred pilgrimage sites in India, steeped in mythology and<br /> divine significance.</p>
               </div>
             </Col>
-            <Col md={6}>
+            <Col lg={6} md={12}>
               <div className="about-lefttext">
                 <p className="text-black">
                   <b>Shri Mahakaleshwar Temple, located in the ancient city of Ujjain, Madhya Pradesh, is one of the twelve sacred <span className="text-color">Jyotirlingas</span> dedicated to Lord Shiva. The temple holds immense religious significance and is a major pilgrimage site for devotees worldwide.</b>
@@ -152,14 +163,14 @@ const Home = () => {
                 <p>
                   The temple complex includes several smaller shrines and is known for its grand celebrations during festivals such as Maha Shivaratri. The temple's architecture reflects ancient Indian styles, attracting millions of visitors annually.
                 </p>
-                <Button className="outline-darshanbtn text-color">Explore Temple History <AiOutlineExport className="" />
+                <Button className="outline-darshanbtn text-color explore-btn">Explore Temple History <AiOutlineExport className="" />
                 </Button>
               </div>
             </Col>
-            <Col md={6}>
-              <Row>
+            <Col lg={6} md={12}>
+              <Row className=" mb-lg-0 mb-md-0 mb-4 mt-lg-0 mt-md-4 mt-4">
                 <Col md={6}>
-                  <div className="about-cards">
+                  <div className="about-cards mb-lg-0 mb-md-0 mb-4 ">
                     <img src="/icons/one.svg" alt="" />
                     <span className="text-color d-block mb-2 mt-3">4:00 AM DAILY</span>
                     <h4 >Bhasma Aarti</h4>
@@ -214,7 +225,7 @@ const Home = () => {
                     <MdOutlineKeyboardArrowLeft />
                   </button>
                   <button onClick={() => sliderRef.current.slickNext()}>
-                     <MdKeyboardArrowRight />
+                    <MdKeyboardArrowRight />
                   </button>
                 </div>
               </div>
@@ -238,7 +249,7 @@ const Home = () => {
                             <IoLocationOutline />
                             {item.location}</span>
                           <Button variant="link" className="learn-more p-0 text-color">
-                            Learn More<AiOutlineExport className="ms-2"/>
+                            Learn More<AiOutlineExport className="ms-2" />
                           </Button>
                         </div>
                       </Card.Body>
@@ -262,45 +273,47 @@ const Home = () => {
                 <p className="m-0">Book your spiritual journey with ease. All services are available online for<br /> your convenience.</p>
               </div>
             </Col>
-            <Col md={12} className="bhasma-articard">
-              <Row className="align-items-center">
-                <Col md={6} className="p-0">
-                  <img src="images/home/bhasma-aarti.png" alt="" />
-                </Col>
-                <Col md={6}>
-                  <div className="ps-5">
-                    <div className="span-sacred mb-4">
-                      <span className="">
-                        <AiOutlineFire />
-                        Most Sacred</span>
+            <Col md={12} >
+              <div className="bhasma-articard">
+                <Row className="align-items-center">
+                  <Col md={6} className="">
+                    <img src="images/home/bhasma-aarti.png" alt="" />
+                  </Col>
+                  <Col md={6}>
+                    <div className="ps-xl-5 ps-lg-0 py-lg-0 py-4 px-lg-0 px-4">
+                      <div className="span-sacred mb-4 ">
+                        <span className="">
+                          <AiOutlineFire />
+                          Most Sacred</span>
+                      </div>
+                      <h4>Bhasma Aarti</h4>
+                      <p>The most unique and powerful ritual performed at 4:00 AM,<br /> where the Shivalinga is adorned with sacred ash.<br /> Witness this divine ceremony.</p>
+                      <div className="card_flex">
+                        <div className="inner-card">
+                          <span>Timing</span>
+                          <h5>4:00 AM</h5>
+                        </div>
+                        <div className="inner-card">
+                          <span>Duration</span>
+                          <h5>45 Minutes</h5>
+                        </div>
+                        <div className="inner-card">
+                          <span>Advance Booking</span>
+                          <h5>Required</h5>
+                        </div>
+                      </div>
+                      <Button className="btn-bgcolor">Book Bhasma Aarti
+                        <FaArrowRight className="ms-2" />
+                      </Button>
                     </div>
-                    <h4>Bhasma Aarti</h4>
-                    <p>The most unique and powerful ritual performed at 4:00 AM,<br /> where the Shivalinga is adorned with sacred ash.<br /> Witness this divine ceremony.</p>
-                    <div className="card_flex">
-                      <div className="inner-card">
-                        <span>Timing</span>
-                        <h5>4:00 AM</h5>
-                      </div>
-                      <div className="inner-card">
-                        <span>Duration</span>
-                        <h5>45 Minutes</h5>
-                      </div>
-                      <div className="inner-card">
-                        <span>Advance Booking</span>
-                        <h5>Required</h5>
-                      </div>
-                    </div>
-                    <Button className="btn-bgcolor">Book Bhasma Aarti
-                      <FaArrowRight className="ms-2" />
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
+                  </Col>
+                </Row>
+              </div>
             </Col>
 
           </Row>
-          <Row className="mt-4 service-card">
-            <Col md={3}>
+          <Row className="mt-lg-4 mt-md-3 mt-2 service-card gy-3">
+            <Col lg={3} md={6}>
               <Card>
                 <Card.Img variant="top" src="images/home/pujan.png" />
                 <Card.Body>
@@ -316,7 +329,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={3}>
+            <Col lg={3} md={6}>
               <Card>
                 <Card.Img variant="top" src="images/home/donation.png" />
                 <Card.Body>
@@ -332,7 +345,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={3}>
+            <Col lg={3} md={6}>
               <Card>
                 <Card.Img variant="top" src="images/home/darshan.png" />
                 <Card.Body>
@@ -348,7 +361,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col md={3}>
+            <Col lg={3} md={6}>
               <Card>
                 <Card.Img variant="top" src="images/home/book.png" />
                 <Card.Body>
@@ -415,51 +428,52 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Bottom Cards */}
-            <Row className=" mt-4">
-              <Col md={6}>
-                <Card className="info-card">
-                  <Card.Img src="/images/home/annakshetra.png" />
-                  <Card.Body>
-                    <span className="card-tag text-color">
-                      <img src="icons/prasad.svg" alt="" className="me-2" />Divine Prasad</span>
-                    <Card.Title>Annakshetra</Card.Title>
-                    <Card.Text>
-                      Annakshetra offers free and sacred meals (prasad) to devotees, following the tradition of Anna Daan, considered the...
-                    </Card.Text>
-                    <div className="Daily-Meals">
-                      <span className="text-color">10000+ </span>
-                      Daily Meals
-                    </div>
-                    <Button variant="outline-primary" className="outline-darshanbtn text-color" size="sm">
-                      Learn More<FaArrowRight className="ms-2 text-color" />
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
+          </Row>
 
-              <Col md={6}>
-                <Card className="info-card">
-                  <Card.Img src="/images/home/bhakt-niwas.png" className="" />
-                  <Card.Body>
-                    <span className="card-tag text-color">
-                      <img src="icons/pillgrim.svg" alt="" className="me-2" />
-                      Pilgrim Accommodation</span>
-                    <Card.Title>Bhakt Niwas</Card.Title>
-                    <Card.Text>
-                      Bhakt Niwas provides clean and comfortable accommodation for devotees, offering a peaceful stay close to the...
-                    </Card.Text>
-                    <div className="Daily-Meals">
-                      <span className="text-color">500+ </span>
-                      Rooms
-                    </div>
-                    <Button variant="outline-primary" className="outline-darshanbtn text-color" size="sm">
-                      Learn More <FaArrowRight className="ms-2 text-color" />
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+          {/* Bottom Cards */}
+          <Row className=" mt-4">
+            <Col lg={6} md={12}>
+              <Card className="info-card mb-lg-0 mb-md-3 mb-3">
+                <Card.Img src="/images/home/annakshetra.png" />
+                <Card.Body>
+                  <span className="card-tag text-color">
+                    <img src="icons/prasad.svg" alt="" className="me-2" />Divine Prasad</span>
+                  <Card.Title>Annakshetra</Card.Title>
+                  <Card.Text>
+                    Annakshetra offers free and sacred meals (prasad) to devotees, following the tradition of Anna Daan, considered the...
+                  </Card.Text>
+                  <div className="Daily-Meals">
+                    <span className="text-color">10000+ </span>
+                    Daily Meals
+                  </div>
+                  <Button variant="outline-primary" className="outline-darshanbtn text-color" size="sm">
+                    Learn More<FaArrowRight className="ms-2 text-color" />
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={6} md={12}>
+              <Card className="info-card">
+                <Card.Img src="/images/home/bhakt-niwas.png" className="" />
+                <Card.Body>
+                  <span className="card-tag text-color">
+                    <img src="icons/pillgrim.svg" alt="" className="me-2" />
+                    Pilgrim Accommodation</span>
+                  <Card.Title>Bhakt Niwas</Card.Title>
+                  <Card.Text>
+                    Bhakt Niwas provides clean and comfortable accommodation for devotees, offering a peaceful stay close to the...
+                  </Card.Text>
+                  <div className="Daily-Meals">
+                    <span className="text-color">500+ </span>
+                    Rooms
+                  </div>
+                  <Button variant="outline-primary" className="outline-darshanbtn text-color" size="sm">
+                    Learn More <FaArrowRight className="ms-2 text-color" />
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </section>
@@ -475,7 +489,7 @@ const Home = () => {
             </div>
           </Col>
 
-          <Row className="justify-content-center">
+          <Row className="justify-content-center gy-3">
             <Col md={4}>
               <Card className="award-card text-center">
                 <Card.Body>

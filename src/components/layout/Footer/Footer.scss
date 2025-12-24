@@ -8,6 +8,11 @@
         font-weight: 700;
         text-align: center;
         padding-bottom: 16px;
+
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
+        
     }
 
     .orange-header {
@@ -22,6 +27,10 @@
             align-items: center;
             gap: 35px;
 
+            @media (max-width: 767px) {
+                display: block;
+            }
+
             li {
 
                 span {
@@ -32,7 +41,7 @@
                     align-items: center;
                     gap: 15px;
 
-                    @media (max-width: 767px) {
+                    @media (max-width: 1024px) {
                         font-size: 16px;
                     }
                 }
@@ -46,7 +55,7 @@
         background-color: #EF5E041A;
 
         .footer-logo {
-            @media (max-width: 767px) {
+            @media (max-width: 1024px) {
                 width: 100%;
             }
         }
@@ -79,6 +88,11 @@
                 color: #000;
                 border-bottom: 1px solid #9494944D;
                 margin-bottom: 38px;
+
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                    padding-top: 10px;
+                }
             }
 
             span {

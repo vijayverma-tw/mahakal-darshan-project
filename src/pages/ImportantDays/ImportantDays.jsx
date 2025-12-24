@@ -17,8 +17,8 @@ const ImportantDays = () => {
             <h1 className="mt-3">Important Days</h1>
           </div>
 
-          <div className="important-table-wrapper ">
-            <table className="important-table">
+          <div className="important-table-wrapper table-responsive">
+            <table className="important-table ">
               <thead>
                 <tr>
                   <th>No</th>

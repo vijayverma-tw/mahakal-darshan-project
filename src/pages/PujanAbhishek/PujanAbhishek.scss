@@ -2,7 +2,8 @@
     background-image: url("../../../public/images/pujan.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    // height: 70vh;
+    aspect-ratio: 16 / 5;
 }
 
 .pujan-section {
@@ -25,6 +26,10 @@
         .image-wrapper {
             height: 296px;
 
+            @media (max-width: 767px) {
+                height: 180px;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -42,6 +47,10 @@
                 margin-bottom: 9px;
                 color: #000000;
                 font-family: 'Onest';
+
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
             }
 
             .card-text {
@@ -71,6 +80,10 @@
                 font-size: 24px;
                 color: #11111F;
                 font-family: 'Onest';
+
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
             }
 
             .book-btn {

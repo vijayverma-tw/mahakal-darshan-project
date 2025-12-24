@@ -14,7 +14,7 @@ const Footer = () => {
               <FaPhoneAlt />
               0734-2550563</span>
           </li>
-          <li>|</li>
+          <li className='d-lg-flex d-md-flex d-none'>|</li>
           <li>
             <span><FaLocationDot />Shri Mahakaleshwar Temple Management Committee, Ujjain</span>
           </li>
@@ -39,25 +39,25 @@ const Footer = () => {
               <div className='right-content'>
                 <h5 className='pb-2'>Quick Links</h5>
                 <Row className='g-4'>
-                  <Col md={6}>
+                  <Col lg={6} md={6} sm={6} xs={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
                       <a>About Temple</a>
                     </div>
                   </Col>
-                  <Col md={6}>
+                  <Col lg={6} md={6} sm={6} xs={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
                       <a href='/privacy-policy'>Privacy Policy</a>
                     </div>
                   </Col>
-                  <Col md={6}>
+                  <Col lg={6} md={6} sm={6} xs={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
                       <a href='/gallery'>Photo Gallery</a>
                     </div>
                   </Col>
-                  <Col md={6}>
+                  <Col lg={6} md={6} sm={6} xs={6}>
                     <div className='d-flex align-items-center gap-4'>
                       <span></span>
                       <a href='/contact'>Contact Us</a>

@@ -12,7 +12,7 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler position-relative"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#mainNavbar"
@@ -20,12 +20,12 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon "></span>
         </button>
 
         {/* Nav Links */}
         <div className="collapse navbar-collapse" id="mainNavbar">
-          <ul className="navbar-nav m-auto gap-5">
+          <ul className="navbar-nav m-auto gap-lg-5 gap-md-3 gap-4">
             <li className="nav-item">
               <Link className="nav-link active" to="/">
                 Home
@@ -146,9 +146,14 @@ const Header = () => {
                 AI Guide
               </Link>
             </li>
+            <li className="nav-item d-lg-none d-md-none d-block">
+              <Link className="live-darshan-btn text-decoration-none" to="/booking">
+                Booking
+              </Link>
+            </li>
           </ul>
         </div>
-        <div>
+        <div className="d-lg-block d-md-block d-none">
           <Link className="live-darshan-btn text-decoration-none" to="/booking">
             Booking
           </Link>

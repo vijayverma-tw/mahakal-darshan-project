@@ -2,7 +2,8 @@
   background-image: url("../../../public/images/timing/timing-banner.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  // height: 70vh;
+  aspect-ratio: 16 / 5;
 }
 
 .time-banner p {
@@ -13,6 +14,13 @@
   padding: 8px 24px;
   display: unset;
   position: relative;
+  color: #000;
+  font-family: onest;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+
 }
 
 .time-banner .line-left {
@@ -22,6 +30,18 @@
   max-width: 100%;
   background-image: url("../../../public/images/line.png");
   background-size: contain;
+
+  @media (max-width: 767px) {
+    width: 50px;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width:1399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width:1024px) {
+    width: 100px;
+  }
 }
 
 .time-banner .line-right {
@@ -31,12 +51,28 @@
   max-width: 100%;
   background-image: url("../../../public/images/line.png");
   background-size: contain;
+
+  @media (max-width: 767px) {
+    width: 50px;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width:1399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width:1024px) {
+    width: 100px;
+  }
 }
 
 .time-banner h1 {
   font-size: 40px;
   font-weight: 700;
   color: #02033B;
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
 }
 
 .time-card {

@@ -6,12 +6,12 @@ const Contact = () => {
   return (
     <>
       <section className="contact-banner"></section>
-      <section className="py-5 time-banner contact-head">
+      <section className="py-5 time-banner ">
         <Container>
           <div className="text-center">
             <div>
-              <span className="line-left"></span>{" "}
-              <h1 className="text-uppercase">Contact us</h1>{" "}
+              <span className="line-left"></span>
+              <p className="text-uppercase">Contact us</p>
               <span className="line-right"></span>
             </div>
           </div>

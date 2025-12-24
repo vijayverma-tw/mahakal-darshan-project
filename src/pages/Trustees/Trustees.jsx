@@ -20,7 +20,7 @@ const Trustees = () => {
       <section className="pt-4">
         <Container>
           <Row>
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -36,7 +36,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -52,7 +52,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -68,7 +68,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -86,7 +86,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -104,7 +104,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />
@@ -123,7 +123,7 @@ const Trustees = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12} className="mb-4">
+            <Col lg={4} md={6} xs={12} className="mb-4">
               <div className="trustees-card">
                 <div className="trustee-img">
                   <img src="images/trustees/1.png" alt="" />

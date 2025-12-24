@@ -7,7 +7,12 @@
     font-style: normal;
     font-display: swap;
 }
-
+@font-face {
+    font-family: "AvertaStd-Semibold";
+    src: url("../../public/font/averta/avertastdpe-semibold.otf") format("opentype");;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: "Averta";
     src: url("../../public/font/averta/AvertaDemoPECuttedDemo-Regular.otf") format("opentype");

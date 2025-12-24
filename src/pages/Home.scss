@@ -5,6 +5,14 @@
     background-size: 100%;
     background-position: center;
 
+    @media (max-width: 767px) {
+        background-image: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1024px) {
+        background-size: cover;
+    }
+
     .mahakal-img {
         width: 100%;
     }
@@ -22,11 +30,23 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-family: Georgia;
+
+            @media (max-width: 767px) {
+                font-size: 35px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width:1024px) {
+                font-size: 40px;
+            }
         }
 
         p {
             font-size: 20px;
             color: #000;
+
+            @media screen and (min-width: 768px) and (max-width:1024px) {
+                font-size: 16px;
+            }
         }
 
         .span-sacred {
@@ -50,6 +70,13 @@
                 font-size: 16px;
                 display: flex;
                 align-items: center;
+                font-family: "AvertaStd-Semibold";
+
+                @media (max-width: 900px) {
+                    font-size: 12px;
+                    padding: 10px;
+                    height: 46px;
+                }
             }
 
             .book-aartibtn {
@@ -93,12 +120,30 @@
         h3 {
             font-size: 24px;
             font-weight: 400;
+            font-family: "AvertaStd-Semibold";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+
+            svg {
+                font-size: 18px;
+                color: #EF5E04;
+
+            }
         }
 
         p {
             font-size: 16px;
             font-weight: 400;
             color: #000;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -107,36 +152,58 @@
 .about-bg {
     padding-bottom: 90px;
 
+    @media (max-width: 767px) {
+        padding-bottom: 40px;
+    }
+
     &::before {
         position: absolute;
         left: 0;
         content: "";
-        // background-image: url("../../public/images/about/temple.png");
+        background-image: url("../../public/images/about/temple.png");
         position: absolute;
         bottom: -28px;
         background-repeat: no-repeat;
         height: 555px;
         width: 595px;
         z-index: 99;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 
     &::after {
         position: absolute;
         right: 0;
         content: "";
-        // background-image: url("../../public/images/about/trishul.png");
+        background-image: url("../../public/images/about/trishul.png");
         position: absolute;
         top: -0;
         background-repeat: no-repeat;
         height: 523px;
         width: 290px;
         z-index: 99;
+
+        @media (max-width: 767px) {
+            height: 200px;
+            width: 100px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width:1024px) {
+            background-size: 100%;
+
+        }
     }
 }
 
 .about-mahakaleshwar {
     padding-top: 90px;
     position: relative;
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+    }
 
     .Top-heading {
         span {
@@ -152,6 +219,10 @@
             background-clip: text;
             font-family: Georgia;
             font-size: 40px;
+
+            @media (max-width: 767px) {
+                font-size: 30px;
+            }
         }
 
         p {
@@ -159,6 +230,10 @@
             font-weight: 400;
             color: #000000B2;
             padding-bottom: 48px;
+
+            @media (max-width: 767px) {
+                padding-bottom: 30px;
+            }
         }
     }
 
@@ -170,6 +245,9 @@
         }
 
         button {
+            padding: 13px 20px;
+            border-radius: 8px;
+
             svg {
                 color: #EF5E04;
             }
@@ -269,6 +347,7 @@
                 button {
                     text-decoration: none;
                     font-size: 12px;
+                    font-family: AvertaStd-Semibold;
 
                     svg {
                         color: #EF5E04;
@@ -288,6 +367,11 @@
     /* Top-left slick dots */
     .temple-slider {
         position: relative;
+
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
 
         .slick-dots {
             position: absolute;
@@ -325,13 +409,16 @@
             }
         }
 
-        /* Active dot → pill */
-        .slick-dots li.slick-active button:before {
+        .slick-dots li.slick-active button {
+            background: #EF5E04;
             width: 34px;
             height: 10px;
-            background: #EF5E04;
-            border-radius: 20px;
-            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        /* Active dot → pill */
+        .slick-dots li.slick-active button:before {
+            display: none;
         }
     }
 
@@ -432,6 +519,10 @@
         img {
             border-radius: 22px 0px 0px 22px;
             width: 100%;
+
+            @media (max-width: 767px) {
+                border-radius: 0;
+            }
         }
 
         .span-sacred {
@@ -478,10 +569,13 @@
 
 //
 .center-attraction {
+    @media (max-width: 767px) {
+        padding: 40px 15px;
+    }
 
     /* Featured Card */
     .featured-card {
-        // background: url("../../public/images/home/mahakal-lok.svg") center/cover no-repeat;
+        background: url("../../public/images/home/mahakal-lok.svg") center/cover no-repeat;
         border-radius: 24px;
         color: #fff;
         position: relative;
@@ -491,6 +585,10 @@
             position: relative;
             max-width: 740px;
             padding: 72px 75px;
+
+            @media (max-width: 767px) {
+                padding: 72px 15px;
+            }
         }
 
         .badge-tag {
@@ -517,10 +615,17 @@
                 border: 1px solid #2B121233;
                 text-align: center;
 
+                @media (max-width: 767px) {
+                    padding: 6px 20px;
+                }
+
                 strong {
                     display: block;
                     font-size: 20px;
-                    // font-family: "AvertaStd-Bold";
+
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
                 }
 
                 span {
@@ -537,8 +642,16 @@
         flex-direction: row;
         padding: 16px;
 
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
         .card-body {
-            padding: 0px 26px;
+            padding: 0px 32px;
+
+            @media (max-width: 1200px) {
+                padding: 20px 20px 0px;
+            }
         }
 
         .card-title {
@@ -582,6 +695,10 @@
         padding: 24px 47px;
         border-radius: 12px;
         border: 1px solid #C0C0C0;
+
+        @media screen and (min-width: 768px) and (max-width:1024px) {
+            padding: 24px;
+        }
 
         .card-body {
             padding: 0;

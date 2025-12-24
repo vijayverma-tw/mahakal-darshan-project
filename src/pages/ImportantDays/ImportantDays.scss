@@ -2,19 +2,21 @@
     background-image: url("../../../public/images/days.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    // height: 70vh;
+    aspect-ratio: 16 / 5;
 }
 
 .important-table-wrapper {
     background: #fff;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .important-table {
     width: 100%;
     border-collapse: separate;
     border-radius: 0;
-    border-spacing: 0 8px;  
+    border-spacing: 0 8px;
+
     thead {
         background: #ff8c24;
         color: #fff;
@@ -66,6 +68,10 @@
     border-radius: 10px;
     margin-bottom: 42px;
 
+    @media (max-width: 767px) {
+        padding: 22px;
+    }
+
     p {
         margin: 0;
         font-size: 18px;
@@ -74,5 +80,9 @@
         font-family: onest;
         background: transparent;
         padding: 0;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
     }
 }

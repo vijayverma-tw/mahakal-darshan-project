@@ -1,5 +1,5 @@
 
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./TempleHistory.scss";
 const historyData = [
     {
@@ -67,7 +67,7 @@ const TempleHistory = () => {
                     </div>
 
                     {/* Item 2 */}
-                    <div className="timeline-item left text-end">
+                    <div className="timeline-item left text-lg-end">
                         <div className="year-pill">11th & 12th <br />Century</div>
                         <div className="content-card">
                             <img src="/images/history/medieval.png" alt="" />

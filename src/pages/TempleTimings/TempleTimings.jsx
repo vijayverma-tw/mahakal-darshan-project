@@ -20,7 +20,7 @@ const TempleTimings = () => {
       <section className="pt-4">
         <Container>
           <Row>
-            <Col md={4} xs={12}>
+            <Col lg={4} md={6} xs={12}>
               <div className="time-card">
                 <div className="time-img">
                   <img src="images/timing/1.png" alt="" />
@@ -37,7 +37,7 @@ const TempleTimings = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12}>
+            <Col lg={4} md={6} xs={12}>
               <div className="time-card">
                 <div className="time-img">
                   <img src="images/timing/1.png" alt="" />
@@ -54,7 +54,7 @@ const TempleTimings = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12}>
+            <Col lg={4} md={6} xs={12}>
               <div className="time-card">
                 <div className="time-img">
                   <img src="images/timing/1.png" alt="" />
@@ -71,7 +71,7 @@ const TempleTimings = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12}>
+            <Col lg={4} md={6} xs={12}>
               <div className="time-card">
                 <div className="time-img">
                   <img src="images/timing/1.png" alt="" />
@@ -88,7 +88,7 @@ const TempleTimings = () => {
               </div>
             </Col>
 
-            <Col md={4} xs={12}>
+            <Col lg={4} md={6} xs={12}>
               <div className="time-card">
                 <div className="time-img">
                   <img src="images/timing/5.png" alt="" />
